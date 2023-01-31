@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Dental First Aid</string>
+    <string name="disclaimer_screen">Disclaimer</string>
+    <string name="tooth_screen">Tooth</string>
+    <string name="injury_screen">Injury type</string>
+    <string name="instructions_screen">Instructions</string>
+
+    <string name="start_description">A step-by-step guide to manage dental trauma</string>
+    <string name="click">Click to continue</string>
+
+    <string name="a_note">A note before continuing</string>
+    <string name="disclaimer">This is a guide for managing teeth that have been damaged due
+        to <strong>physical injury</strong>, such as a fall or other accident. Following this
+        guide will improve the chances that your dentist will be able to save the tooth. It
+        may also reduce the cost and complexity of treatment required.
+        <strong>
+            These actions are not a substitute for seeing a dentist, and with the exception of extremely minor
+            injuries, you MUST see a dentist for definitive treatment of the tooth.
+        </strong>
+    </string>
+
+    <string name="baby_tooth_text">I\'ve hit a baby tooth</string>
+    <string name="adult_tooth_text">I\'ve hit an adult tooth</string>
+
+    <string name="avulsion">It\'s been knocked out!</string>
+    <string name="luxation">It\'s been moved backwards/forwards, or it\'s currently loose</string>
+    <string name="intrusion">It\'s been pushed in</string>
+    <string name="fracture">A piece has broken off</string>
+
+<!--    <string name=""></string>-->
+</resources>
