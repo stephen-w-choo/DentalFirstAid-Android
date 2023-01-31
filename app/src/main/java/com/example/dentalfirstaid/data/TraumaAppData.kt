@@ -1,5 +1,6 @@
 package com.example.dentalfirstaid.data
 
+import androidx.compose.ui.res.stringResource
 import com.example.dentalfirstaid.R
 import com.example.dentalfirstaid.model.ToothInjury
 import com.example.dentalfirstaid.model.ToothType
@@ -19,6 +20,15 @@ object TraumaAppData {
     val ToothInjuries = listOf(
         ToothInjury(
             injuryDescription = R.string.avulsion
+        ),
+        ToothInjury(
+            injuryDescription = R.string.intrusion
+        ),
+        ToothInjury(
+            injuryDescription = R.string.luxation
+        ),
+        ToothInjury(
+            injuryDescription = R.string.fracture
         )
     )
 }

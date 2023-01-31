@@ -1,17 +1,16 @@
 package com.example.dentalfirstaid
 
 import androidx.annotation.StringRes
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.dentalfirstaid.ui.TraumaDisclaimerScreen
+import com.example.dentalfirstaid.ui.TraumaStartScreen
 
 enum class TraumaScreen(@StringRes val title: Int) {
     Start(title = R.string.app_name),
@@ -48,7 +47,9 @@ fun TraumaApp(
         }
         composable(route = TraumaScreen.Disclaimer.name) {
             TraumaDisclaimerScreen(
-                onNext = {}
+                onNext = {
+                    navController.navigate(TraumaScreen.Tooth.name)
+                }
             )
         }
         composable(route = TraumaScreen.Tooth.name){
