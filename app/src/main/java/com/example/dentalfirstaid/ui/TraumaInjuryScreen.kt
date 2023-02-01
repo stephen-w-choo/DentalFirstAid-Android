@@ -9,13 +9,15 @@ import com.example.dentalfirstaid.data.TraumaAppData.ToothInjuries
 
 @Composable
 fun TraumaInjuryScreen(
-    onNext: () -> Unit
+    onNext: () -> Unit,
+    updateToothInjury: (String) -> Unit,
 ) {
     Column(){
-        ToothInjuries.forEachIndexed { index, toothInjury ->
+        ToothInjuries.forEach { toothInjury ->
             Button(
                 onClick = {
-
+                    onNext()
+                    updateToothInjury(toothInjury.injuryType)
                 }
             ) {
                 Text(text = stringResource(toothInjury.injuryDescription))

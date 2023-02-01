@@ -4,6 +4,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 
 data class ToothType(
+    val toothType: String,
     @StringRes
     val toothText: Int,
     @DrawableRes
