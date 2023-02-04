@@ -5,18 +5,20 @@
     <string name="injury_screen">Injury type</string>
     <string name="instructions_screen">Instructions</string>
 
+    <string name="back_button">Back</string>
+
     <string name="start_description">A step-by-step guide to manage dental trauma</string>
     <string name="click">Click to continue</string>
 
     <string name="a_note">A note before continuing</string>
-    <string name="disclaimer">This is a guide for managing teeth that have been damaged due
+    <string name="disclaimer1">This is a guide for managing teeth that have been damaged due
         to <strong>physical injury</strong>, such as a fall or other accident. Following this
         guide will improve the chances that your dentist will be able to save the tooth. It
         may also reduce the cost and complexity of treatment required.
-        <strong>
-            These actions are not a substitute for seeing a dentist, and with the exception of extremely minor
-            injuries, you MUST see a dentist for definitive treatment of the tooth.
-        </strong>
+    </string>
+    <string name="disclaimer2"><b>These actions are not a substitute for seeing a dentist, and with the exception of extremely minor
+        injuries, you MUST see a dentist for definitive treatment of the tooth.
+        </b>
     </string>
 
     <string name="baby_tooth_text">I\'ve hit a baby tooth</string>

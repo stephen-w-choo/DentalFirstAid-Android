@@ -42,7 +42,7 @@ object TraumaAppData {
     val ToothTreatments: HashMap<String, HashMap<String, List<String>>> = hashMapOf(
         "baby" to hashMapOf(
             "avulsion" to listOf(
-                "IMPORTANT: you may have seen recommendations elsewhere to replant teeth if they fall out. This is only true for adult teeth. <strong>Baby teeth are NOT to be replanted.</strong>",
+                "IMPORTANT: you may have seen recommendations elsewhere to replant teeth if they fall out. This is only true for adult teeth. Baby teeth are NOT to be replanted.",
                 "Congratulations - the tooth fairy has come early!",
                 "Baby teeth are meant to fall out sooner or later (with very rare exceptions!), and usually minimal treatment is required.",
                 "Apply firm pressure to the gums with gauze, paper towel, or a clean cloth to stop bleeding, if there is any.",
@@ -68,11 +68,11 @@ object TraumaAppData {
         ),
         "adult" to hashMapOf(
             "avulsion" to listOf(
-                "This only applies to adult teeth. <strong> Baby teeth must not be put back in. </strong>",
-                "These instructions are for cases where the <strong>WHOLE</strong> tooth, including the root has been knocked out. For cases where only part of the tooth was knocked out, please see the broken tooth section",
-                "Find the tooth and hold it <strong> by the crown</strong>. Avoid touching the root if at all possible.",
-                "<strong>Briefly</strong> rinse the tooth, preferably with milk, but you can use water if available. <strong> Do not rinse for more than 1-2 seconds</strong>",
-                "<strong> Do not try to wipe or clean the tooth root!</strong>",
+                "This only applies to adult teeth.  Baby teeth must not be put back in. ",
+                "These instructions are for cases where the WHOLE tooth, including the root has been knocked out. For cases where only part of the tooth was knocked out, please see the broken tooth section",
+                "Find the tooth and hold it  by the crown. Avoid touching the root if at all possible.",
+                "Briefly rinse the tooth, preferably with milk, but you can use water if available.  Do not rinse for more than 1-2 seconds",
+                "Do not try to wipe or clean the tooth root!",
                 "Gently reinsert the tooth back into the socket.",
                 "Stabilise and minimise movement of the tooth. You can wrap it up with aluminum foil or a similar stiff material if available, like an improvised mouthguard.",
                 "Otherwise, if you have nothing on hand to stabilise the tooth, gently bitedown on something soft (cotton roll, tissue paper) and maintain firm pressure on the tooth. The goal is to minimise any kind of movement on the tooth once it's replanted.",
@@ -82,7 +82,7 @@ object TraumaAppData {
             "intrusion" to listOf(
                 "This is where the tooth looks shorter from being pushed into the actual socket.",
                 "Apply firm pressure to the gums with gauze to stop bleeding.",
-                "See a dentist <strong> as soon as possible</strong> - this is one of the more serious injuries that requires immediate care."
+                "See a dentist  as soon as possible - this is one of the more serious injuries that requires immediate care."
             ),
             "luxation" to listOf(
                 "Apply firm pressure with gauze to the gums to stop any bleeding.",
