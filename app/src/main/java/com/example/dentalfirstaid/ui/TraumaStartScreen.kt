@@ -1,5 +1,6 @@
 package com.example.dentalfirstaid.ui
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -29,8 +30,12 @@ import com.example.dentalfirstaid.data.TraumaAppData.ToothTypes
 @Composable
 fun TraumaStartScreen(
     onNext: ()-> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onBackPressed: ()-> Unit,
 ){
+    BackHandler {
+        onBackPressed()
+    }
     Column(
         modifier = modifier
             .fillMaxSize(),
@@ -80,8 +85,12 @@ fun TraumaStartScreen(
 @Composable
 fun TraumaDisclaimerScreen(
     onNext: ()-> Unit = {},
-    modifier: Modifier = Modifier
-) {
+    modifier: Modifier = Modifier,
+    onBackPressed: ()-> Unit,
+){
+    BackHandler {
+        onBackPressed()
+    }
     Column(
         modifier = modifier
             .fillMaxSize(),
@@ -135,8 +144,12 @@ fun TraumaDisclaimerScreen(
 fun TraumaToothScreen(
     onNext: () -> Unit,
     updateToothType: (String) -> Unit,
-    modifier: Modifier = Modifier
-) {
+    modifier: Modifier = Modifier,
+    onBackPressed: ()-> Unit,
+){
+    BackHandler {
+        onBackPressed()
+    }
     Column(
         modifier = modifier
             .fillMaxSize(),

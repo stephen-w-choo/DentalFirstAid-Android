@@ -1,5 +1,6 @@
 package com.example.dentalfirstaid.ui
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.*
@@ -15,17 +16,15 @@ import androidx.compose.ui.unit.dp
 import com.example.dentalfirstaid.data.TraumaAppData.ToothTreatments
 import com.example.dentalfirstaid.model.ToothTreatment
 
-@Preview
-@Composable
-fun PreviewScreen() {
-    ToothTreatments["baby"]?.get("avulsion")?.let { TraumaInstructionsScreen(instructions = it) }
-}
-
 @Composable
 fun TraumaInstructionsScreen(
     instructions: List<String>,
-    modifier: Modifier = Modifier
-) {
+    modifier: Modifier = Modifier,
+    onBackPressed: ()-> Unit,
+){
+    BackHandler {
+        onBackPressed()
+    }
     Column(
         modifier = modifier
             .fillMaxSize(),

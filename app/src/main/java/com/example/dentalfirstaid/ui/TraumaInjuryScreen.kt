@@ -1,5 +1,6 @@
 package com.example.dentalfirstaid.ui
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
@@ -21,7 +22,11 @@ fun TraumaInjuryScreen(
     onNext: () -> Unit,
     updateToothInjury: (String) -> Unit,
     modifier: Modifier = Modifier,
-) {
+    onBackPressed: ()-> Unit,
+){
+    BackHandler {
+        onBackPressed()
+    }
     Column(
         modifier = modifier
             .fillMaxSize(),

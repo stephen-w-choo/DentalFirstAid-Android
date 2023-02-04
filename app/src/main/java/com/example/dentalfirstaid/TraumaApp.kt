@@ -1,5 +1,6 @@
 package com.example.dentalfirstaid
 
+import android.app.Activity
 import androidx.annotation.StringRes
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -8,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
@@ -59,7 +61,7 @@ fun TraumaApp(
     val uiState = viewModel.uiState.collectAsState().value
 
     val backStackEntry by navController.currentBackStackEntryAsState()
-
+    val activity = LocalContext.current as Activity
     val currentScreen = TraumaScreen.valueOf(
         backStackEntry?.destination?.route ?: TraumaScreen.Start.name
         // nullable + elvis operator means that if the backstack returns null
@@ -84,26 +86,30 @@ fun TraumaApp(
                 TraumaStartScreen(
                     onNext = {
                         navController.navigate(TraumaScreen.Disclaimer.name)
-                    }
+                    },
+                    onBackPressed = { activity.finish() }
                 )
             }
             composable(route = TraumaScreen.Disclaimer.name) {
                 TraumaDisclaimerScreen(
                     onNext = {
                         navController.navigate(TraumaScreen.Tooth.name)
-                    }
+                    },
+                    onBackPressed = { navController.navigateUp() }
                 )
             }
             composable(route = TraumaScreen.Tooth.name) {
                 TraumaToothScreen(
                     onNext = { navController.navigate(TraumaScreen.Injury.name) },
-                    updateToothType = { viewModel.updateCurrentToothType(it) }
+                    updateToothType = { viewModel.updateCurrentToothType(it) },
+                    onBackPressed = { navController.navigateUp() }
                 )
             }
             composable(route = TraumaScreen.Injury.name) {
                 TraumaInjuryScreen(
                     onNext = { navController.navigate(TraumaScreen.Instructions.name) },
-                    updateToothInjury = { viewModel.updateCurrentInjuryType(it) }
+                    updateToothInjury = { viewModel.updateCurrentInjuryType(it) },
+                    onBackPressed = { navController.navigateUp() }
                 )
             }
             composable(route = TraumaScreen.Instructions.name) {
@@ -115,7 +121,8 @@ fun TraumaApp(
                     ToothTreatments[uiState.currentToothType]?.get(uiState.currentInjury)
                         ?.let { it1 ->
                             TraumaInstructionsScreen(
-                                instructions = it1
+                                instructions = it1,
+                                onBackPressed = { navController.navigateUp() }
                             )
                         }
                 }
